@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assest/js/index.js"></script>
+
+    <title>Construction Company - Home</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Construction Company</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Quiénes Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Intranet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar bg-body-tertiary">
+                <form class="container-fluid justify-content-start">
+                    <button class="btn btn-outline-success me-2" type="button">Iniciar sesión</button>
+                    <button class="btn btn-sm btn-outline-secondary" type="button">Crear cuenta</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <section class="intro">
+        <div class="container">
+            <img src="assest/img/2.png" alt="Logo empresarial">
+            <p>En Construction Company, nos enorgullecemos de ser líderes en el sector de la ingeniería y construcción
+                civil. Con más de dos décadas de experiencia, nuestra empresa ha forjado un legado de excelencia y
+                compromiso inquebrantable con la calidad.
+                <br><br>
+                Fundada sobre los pilares de la innovación y la integridad, Construction Company se distingue por su
+                capacidad para transformar visiones en realidades tangibles. Nuestro equipo de profesionales altamente
+                cualificados abarca ingenieros, arquitectos y técnicos dedicados, quienes trabajan en sinergia para
+                entregar proyectos que no solo cumplen, sino que superan las expectativas de nuestros clientes.
+            </p>
+        </div>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <h1>Bienvenido a Construction Company</h1>
+            <p> Bienvenido al portal de Construction Company, donde la excelencia en la construcción encuentra su
+                espacio
+                digital. Nuestro portal está diseñado para ofrecer a nuestros trabajadores una plataforma intuitiva y
+                eficiente para gestionar sus perfiles y mantenerse actualizados con las últimas noticias y proyectos de
+                la
+                empresa.
+
+                <br><br>
+                Al registrarse como usuario, los trabajadores tendrán acceso a una serie de herramientas y recursos
+                diseñados para facilitar su experiencia laboral. Podrán gestionar sus datos personales y profesionales
+                de
+                manera segura y confidencial, garantizando siempre la privacidad y la protección de la información.
+            </p>
+        </div>
+    </section>
+
+    <section class="login">
+        <div class="container mt-5">
+            <h2>Formulario de Registro</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+                </div>
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento">
+                </div>
+                <div class="form-group">
+                    <label for="correoElectronico">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correoElectronico"
+                        placeholder="Ingrese su correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="cargo">Cargo</label>
+                    <select class="form-control" id="cargo">
+                        <option>Ingeniero</option>
+                        <option>Técnico</option>
+                        <option>Administrativo</option>
+                        <option>Personal Externo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fechaIngreso">Fecha de Ingreso</label>
+                    <input type="date" class="form-control" id="fechaIngreso">
+                </div>
+                <button class="btn btn-primary mt-2" type="button" onclick="validarFormulario()">Crear Usuario</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="container mt-5" id="userGrid"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Confirmación de Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalContent"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="agregarUsuario()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="message" class="alert" style="display: none;"></div>
+
+</body>
+<footer>
+    <div class="footer">
+        <div class="logos">
+            <a href="https://www.facebook.com/?locale=es_LA"> <img src="assest/img/logo_facebook.png"
+                    alt="Logo Facebook"></a>
+            <a href="https://www.instagram.com/"><img src="assest/img/logo_instagram.png" alt="Logo Instagram"></a>
+            <a href=" https://www.tiktok.com/"> <img src="assest/img/logo_tiktok.png" alt="Logo TikTok"></a>
+            <a href="https://x.com/"><img src="assest/img/logo_x.png" alt="Logo X"></a>
+        </div>
+        <p>Construction Company 2024. All right reserved</p>
+    </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+
+</html>

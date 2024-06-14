@@ -1,0 +1,138 @@
+/* style.css */
+
+/* Reset básico */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Contenedor de imagen de fondo */
+body {
+  background-image: url("/assest/img/fondo.jpg");
+  background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100vh; /* Ajusta la altura del contenedor */
+  background-attachment: fixed; /* Fija la imagen de fondo */
+}
+
+/* Otras reglas de estilo */
+nav {
+  margin-bottom: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #f1f1f1;
+}
+
+.intro img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.intro,
+.login {
+  display: flex;
+  text-align: center;
+  text-justify: inter-cluster;
+  padding: 1em;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8); /* Fondo nebulizado */
+  transition: background 0.8s ease, transform 0.8s ease; /* Transición suave */
+}
+
+h1 h2 {
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.8); /* Fondo nebulizado */
+  transition: background 0.8s ease, transform 0.8s ease; /* Transición suave */
+}
+
+.intro:hover,
+.intro:hover h1 {
+  background: rgba(255, 255, 255, 1); /* Fondo blanco sólido */
+}
+
+/* Grilla Usuarios */
+#userGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  justify-content: center;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: relative;
+}
+
+.user-card .delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/* Mensajes */
+.alert {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Footer */
+.footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 18px;
+  background-color: whitesmoke;
+}
+
+.footer .logos img {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.footer .logos img:hover {
+  opacity: 0.7;
+}
+
+.fondo_index img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
